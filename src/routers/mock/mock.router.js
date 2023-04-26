@@ -1,15 +1,9 @@
-import { Router } from "express";
-import customError from "../../Errors/customError.js";
-import { HTTP_STATUS } from "../../Errors/constError.js";
-import generateProductsErrorInfo from '../../Errors/generateErrorProducts.js'
+import { Router } from "express";;
+import productController from "../../controllers/product.controller.js";
 
 const router = Router();
 
-const products = []
-
-router.get('/', (req, res)=>{
-    res.send({status:'success', payload:products})
-})
-
+router.get('/', productController.getAll)
+router.post('/', productController.addProduct)
 
 export default router;

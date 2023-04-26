@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import mongoosePaginate from 'mongoose-paginate-v2';
 const {Schema} = mongoose;
 
-export const productsCollecion = 'products';
+export const productsCollecion = 'mock-products';
 
 const productsSchema = new Schema({
     title: { 
@@ -25,18 +25,6 @@ const productsSchema = new Schema({
     stock: { 
         type: Number, 
         required: true
-    },
-    category: { 
-        type: String, 
-        required: true
-    },
-    status: {
-        type: Boolean,
-        default: true
-    },
-    files:{
-        type: [],
-        default: []
     }
 });
 

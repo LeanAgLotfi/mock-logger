@@ -9,5 +9,6 @@ export const generateProducts = () => {
     code:faker.random.numeric(15),
     price:faker.commerce.price(100),
     stock:faker.random.numeric(2),
+    category:faker.commerce.department(),
   }
 };

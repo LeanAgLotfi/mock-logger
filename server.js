@@ -1,9 +1,9 @@
 import express from 'express';
 import apiRouter from './src/routers/route.js' //route
 import path from 'path'
-import { dirname } from 'path';
+//import { dirname } from 'path';
 //constantes
-const __dirname = dirname(fileURLToPath(import.meta.url));
+//const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 //Puerto
 const PORT = 8080;
@@ -12,7 +12,7 @@ const PORT = 8080;
 //middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended:true }));
-app.use(express.static(path.resolve(__dirname, './src/public')))
+//app.use(express.static(path.resolve(__dirname, './src/public')))
 
 //routes
 app.use('/api', apiRouter);
